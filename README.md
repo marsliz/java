@@ -1,5 +1,6 @@
-# java örnekler
-## [Kaprekar Sabiti](https://github.com/marsliz/java/blob/master/Kaprekar_Sabiti.java)
+## Kaprekar Sabiti
+[Java](https://github.com/marsliz/java/blob/master/Kaprekar_Sabiti.java) - [Python](https://github.com/marsliz/python/blob/master/kaprekar_sabiti.py)
+
 Hint matematikçi Kaprekar (1905-1986) tarafından tanımlanan, dört basamaklı sayılara en fazlayedi kez aşağıdaki işlemler uygulandığında ortaya çıkan sabit 6174 sayısı.
 
 İşlemler, tüm basamakları aynı sayıdan oluşmayan (2222 gibi - ilk adımda sıfır sonucunu verecektir) ve herhangi üç basamağındaki sayılar aynı olup kalan bir basamaktaki sayı bu sayıdan bir büyük ya da bir küçük olmayan (1112, 5565 veya 8788 gibi - ilk adımda 999 sayısını verecektir) dört basamaklı sayılara uygulandığında en fazla yedi adımda sıfır veya 6174 sabit sayısını verir.
