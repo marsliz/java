@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Kaprekar_Sabiti {
+public class KaprekarSabiti {
 
     public static void kucuktenBuyuge(int[] dizi) {
         for (int i = 0; i < dizi.length; i++) {
@@ -26,33 +26,33 @@ public class Kaprekar_Sabiti {
 
     public static void main(String[] args) {
         try {
-            // Kullanýcýdan sayý alalým
+            // KullanÄ±cÄ±dan sayÄ± alalÄ±m
             Scanner input = new Scanner(System.in);
-            System.out.print("Bir sayý giriniz : ");
+            System.out.print("Bir sayÄ± giriniz : ");
             int sayi = input.nextInt();
             
-            // Gerekli tanýmlamalarý yapalým
+            // Gerekli tanÄ±mlamalarÄ± yapalÄ±m
             int[] rakamlar = new int[4];
             int[] a = new int[rakamlar.length];
             int[] b = new int[rakamlar.length];
-            // kb : küçükten büyüðe
+            // kb : kÃ¼Ã§Ã¼kten bÃ¼yÃ¼ÄŸe
             StringBuilder kb = new StringBuilder();
-            // bk : büyükten küçüðe
+            // bk : bÃ¼yÃ¼kten kÃ¼Ã§Ã¼ÄŸe
             StringBuilder bk = new StringBuilder();
             
-            // Kullanýcýdan alýnan sayýmýz, sabitimiz olan 6174'e eþit olana kadar aþaðýdaki iþlemler uygulansýn
+            // KullanÄ±cÄ±dan alÄ±nan sayÄ±mÄ±z, sabitimiz olan 6174'e eÅŸit olana kadar aÅŸaÄŸÄ±daki iÅŸlemler uygulansÄ±n
             while (sayi != 6174) {
-                // 1000 < sayi < 9999 olmalý, kontrol edelim
+                // 1000 < sayi < 9999 olmalÄ±, kontrol edelim
                 if (1000 < sayi && sayi < 9999) {
 
-                    // kb ve bk deðiþkenlerimizi temizleyelim
-                    // Temizlemediðimiz zaman neler olduðunu merak ediyorsanýz aþaðýdaki for döngüsünü silip göz atýnýz :D
+                    // kb ve bk deÄŸiÅŸkenlerimizi temizleyelim
+                    // TemizlemediÄŸimiz zaman neler olduÄŸunu merak ediyorsanÄ±z aÅŸaÄŸÄ±daki for dÃ¶ngÃ¼sÃ¼nÃ¼ silip gÃ¶z atÄ±nÄ±z :D
                     for (int i = 0; i < rakamlar.length; i++) {
                         kb.replace(0, rakamlar.length, "");
                         bk.replace(0, rakamlar.length, "");
                     }
 
-                    // Sayýyý basamaklarýna ayýrýp rakamlar dizisine atalým
+                    // SayÄ±yÄ± basamaklarÄ±na ayÄ±rÄ±p rakamlar dizisine atalÄ±m
                     for (int i = 0; i < rakamlar.length; i++) {
                         rakamlar[i] = sayi % 10;
                         sayi = (sayi - rakamlar[i]) / 10;
@@ -60,37 +60,37 @@ public class Kaprekar_Sabiti {
                             break;
                     }
 
-                    // Küçükten büyüðe sýralayalým
+                    // KÃ¼Ã§Ã¼kten bÃ¼yÃ¼ÄŸe sÄ±ralayalÄ±m
                     kucuktenBuyuge(rakamlar);
-                    // Küçükten büyüðe sýralanmýþ rakamlarý a dizisine koplayalým
+                    // KÃ¼Ã§Ã¼kten bÃ¼yÃ¼ÄŸe sÄ±ralanmÄ±ÅŸ rakamlarÄ± a dizisine koplayalÄ±m
                     System.arraycopy(rakamlar, 0, a, 0, rakamlar.length);
 
-                    // Büyükten küçüðe sýralayalým
+                    // BÃ¼yÃ¼kten kÃ¼Ã§Ã¼ÄŸe sÄ±ralayalÄ±m
                     buyuktenKucuge(rakamlar);
-                    // Büyükten küçüðe sýralanmýþ rakamlarý b dizisine koplayalým
+                    // BÃ¼yÃ¼kten kÃ¼Ã§Ã¼ÄŸe sÄ±ralanmÄ±ÅŸ rakamlarÄ± b dizisine koplayalÄ±m
                     System.arraycopy(rakamlar, 0, b, 0, rakamlar.length);
 
-                    // a ve b dizilerine kopyaladýðýmýz rakamlarý kb ve bk üzerinde birleþtirelim
+                    // a ve b dizilerine kopyaladÄ±ÄŸÄ±mÄ±z rakamlarÄ± kb ve bk Ã¼zerinde birleÅŸtirelim
                     for (int j = 0; j < rakamlar.length; j++) {
                         kb.append(a[j]);
                         bk.append(b[j]);
                     }
 
-                    // kb ve bk deðiþkenlerini integera çevirip büyük olaný küçük olandan çýkaralým
+                    // kb ve bk deÄŸiÅŸkenlerini integera Ã§evirip bÃ¼yÃ¼k olanÄ± kÃ¼Ã§Ã¼k olandan Ã§Ä±karalÄ±m
                     sayi = Integer.parseInt(bk.toString()) - Integer.parseInt(kb.toString());
-                    // Çýkarma iþlemini ekrana yazdýralým
+                    // Ã‡Ä±karma iÅŸlemini ekrana yazdÄ±ralÄ±m
                     System.out.printf("%d - %d = %d\n", Integer.parseInt(bk.toString()), Integer.parseInt(kb.toString()), sayi);
                 } 
-                // Hatalarý kontrol edelim
+                // HatalarÄ± kontrol edelim
                 else {
-                    System.err.println("1000'den büyük, 9999'dan küçük bir sayý giriniz!");
+                    System.err.println("1000'den bÃ¼yÃ¼k, 9999'dan kÃ¼Ã§Ã¼k bir sayÄ± giriniz!");
                     break;
                 }
-            } // while bitiþi
+            } // while bitiÅŸi
         } catch (InputMismatchException ime) {
-            System.err.println("1000'den büyük, 9999'dan küçük bir sayý giriniz! " + ime.getMessage());
+            System.err.println("1000'den bÃ¼yÃ¼k, 9999'dan kÃ¼Ã§Ã¼k bir sayÄ± giriniz! " + ime.getMessage());
         } catch (Exception e) {
-            System.err.println("1000'den büyük, 9999'dan küçük bir sayý giriniz! " + e.getMessage());
+            System.err.println("1000'den bÃ¼yÃ¼k, 9999'dan kÃ¼Ã§Ã¼k bir sayÄ± giriniz! " + e.getMessage());
         }
 
     }
