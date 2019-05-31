@@ -1,7 +1,23 @@
+## Kaprekar Sayıları
+[Java](https://github.com/marsliz/java/blob/master/KaprekarSayilari.java) - [Python](https://github.com/marsliz/python/blob/master/kaprekar_sayilari.py)
+
+Kaprekar sayıları, 1949 yılında Hint matematikçi Kaprekar (1905-1986) tarafından tariflenen sayılardır. 
+
+n basamaklı bir t sayısının karesi alınıp sağdaki n basamağı solda kalan n veya n-1 basamağa ekleyince sonuç yine t sayısını verir. Bu sayılara kaprekar sayıları denir.
+
+Örnek: 
+- 55, iki basamaklı bir sayıdır.
+- 55x55=3025, sağdan iki basamak 25, soldan iki basamak 30.
+- Bu iki sayının toplamı 30+25=55 yani sayının kendisidir.
+
+1, 9, 45, 55, 99, 297, 703, 999, 2223, 2728, 4879 sayıları da diğer bazı Kaprekar sayılarıdır.
+
+Kaynak : [Kaprekar sayıları](https://tr.wikipedia.org/wiki/Kaprekar_sayıları)
+
 ## Kaprekar Sabiti
 [Java](https://github.com/marsliz/java/blob/master/Kaprekar_Sabiti.java) - [Python](https://github.com/marsliz/python/blob/master/kaprekar_sabiti.py)
 
-Hint matematikçi Kaprekar (1905-1986) tarafından tanımlanan, dört basamaklı sayılara en fazlayedi kez aşağıdaki işlemler uygulandığında ortaya çıkan sabit 6174 sayısı.
+Kaprekar tarafından tanımlanan, dört basamaklı sayılara en fazla yedi kez aşağıdaki işlemler uygulandığında ortaya çıkan sabit 6174 sayısı.
 
 İşlemler, tüm basamakları aynı sayıdan oluşmayan (2222 gibi - ilk adımda sıfır sonucunu verecektir) ve herhangi üç basamağındaki sayılar aynı olup kalan bir basamaktaki sayı bu sayıdan bir büyük ya da bir küçük olmayan (1112, 5565 veya 8788 gibi - ilk adımda 999 sayısını verecektir) dört basamaklı sayılara uygulandığında en fazla yedi adımda sıfır veya 6174 sabit sayısını verir.
 
