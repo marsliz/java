@@ -1,3 +1,13 @@
+## Armstrong Sayısı
+[Java](https://github.com/marsliz/java/blob/master/ArmstrongSayisi.java) - [Python](https://github.com/marsliz/python/blob/master/armstrong_sayisi.py)
+
+Bir sayının her bir basamağının, sayının basamak sayısı kadar kuvvetinin alınıp toplanmasıyla elde edilen sonuç kendisine eşitse bu sayı bir Armstrong sayısıdır.
+
+Örnek:
+- abc = a^3 + b^3 + c^3
+- abcd = a^4 + b^4 + c^4 + d^4
+- 407 = 4^3 + 0^3 + 7^3 = 407
+
 ## Kaprekar Sayıları
 [Java](https://github.com/marsliz/java/blob/master/KaprekarSayilari.java) - [Python](https://github.com/marsliz/python/blob/master/kaprekar_sayilari.py)
 
